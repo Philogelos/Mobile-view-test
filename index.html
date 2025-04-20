@@ -1,0 +1,38 @@
+<!-- Save as test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewport Test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    .box {
+      background: coral;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Hello POCO X5!</h1>
+    <p>Width: <span id="w"></span>px</p>
+    <p>Height: <span id="h"></span>px</p>
+    <p>DPR: <span id="dpr"></span></p>
+    <p>User-Agent: <span id="ua"></span></p>
+  </div>
+
+  <script>
+    document.getElementById('w').textContent = window.innerWidth;
+    document.getElementById('h').textContent = window.innerHeight;
+    document.getElementById('dpr').textContent = window.devicePixelRatio;
+    document.getElementById('ua').textContent = navigator.userAgent;
+  </script>
+</body>
+</html>
